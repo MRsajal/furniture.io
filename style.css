@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* h1{
+    text-align: center;
+    color: rgb(12, 235, 97);
+} */
+.heading {
+    position: absolute;
+    left: 45%;
+    top: 40px;
+    font-size: 30px;
+    color: burlywood;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: crimson;
+    box-shadow: 2px 0px 5px black;
+    z-index: 10000;
+}
+
+ul li {
+    margin: 5px;
+    padding: 5px;
+    margin-top: 75px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.content {
+    display: flex;
+    width: 500%;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home-img {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.home-img img {
+    width: 74%;
+}
+
+.home-desc {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 300px;
+    padding: 20px;
+    background-color: rgba(255, 228, 196, 0.733);
+    font-size: 18px;
+}
+
+.home-desc h1 {
+    text-align: start;
+    color: rgb(187, 122, 1);
+    font-size: 30px;
+}
+
+.home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.home-btn button {
+    width: 120px;
+    height: 40px;
+    color: white;
+    background-color: rgb(230, 117, 37);
+    border: whitesmoke;
+    border-radius: 10px;
+}
+
+.home-btn button:hover {
+    background-color: chocolate;
+}
+
+#shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: auto;
+}
+
+
+
+@media(max-width:620px) {
+    ul {
+        display: flex;
+        height: 50px;
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    ul li {
+        margin: 0;
+    }
+
+    .heading {
+        left: 0;
+        top: 40px;
+        font-size: 20px;
+        color: burlywood;
+    }
+
+    .home {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .home-img {
+        justify-content: center;
+    }
+
+    .home-img img {
+        width: 50%;
+    }
+
+    .home-desc {
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+}

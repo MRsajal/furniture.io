@@ -1,0 +1,251 @@
+/* .item{
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+.item .card{
+    position: relative;
+    width: 320px;
+    height: 350px;
+    background-color: #e2e2e2;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.item .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d4a31a;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.item .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.item .card::after{
+    content: 'Wooden Chair';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    font-size: 5em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+.item .card .imgBX{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.item .card:hover .imgBX{
+    top: 0;
+    transform: translateY(0);
+}
+.item .card .imgBX img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+}
+.item .card .contentBX{
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.item .card:hover .contentBX{
+    height: 210px;
+}
+.item .card .contentBX h2{
+    color: rgb(29, 28, 28);
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 100px;
+}
+.item .card .contentBX a{
+    text-decoration: none;
+    display: inline-block;
+    background: #000000;
+    margin-top: 10px;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translate(50px);
+    transition: 0.5s;
+    color: rgb(226, 215, 215);
+    padding: 5px;
+}
+.item .card:hover .contentBX a{
+    opacity: 1;
+    transform: translate(0);
+    transition-delay: 0.75s;
+}
+@media(max-width:620px){
+    .item{
+        gap: 5px;
+        width: 80%;
+    }
+    #shop{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media(max-width:420px){
+    .item{
+        gap: 5px;
+        width: 80%;
+    }
+    #shop{
+        margin: 0;
+        padding: 0;
+    }
+} */
+/* #shop{
+    background: linear-gradient(to bottom,rgb(214, 159, 159),rgb(199, 105, 88));
+} */
+.item{
+    display: flex;
+    gap: 30px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 99, 71, 0.747);
+    width: 250px;
+    height: 230px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.card:hover{
+    height: 300px;
+}
+.card .card-img img{
+    width: 230px;
+    height: 220px;
+}
+.card:hover .card-img{
+    transition: .5s ease-in-out;
+    transform: translateY(-30px);
+}
+.card .card-desc h2{
+    margin: 2px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .card-desc h2{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-20px);
+    transition: .5s ease-in-out;
+}
+.card a{
+    text-decoration: none;
+    color: rgb(240, 234, 234);
+    transform: translate(50px);
+    opacity: 0;
+    background-color: rgb(255, 115, 0);
+    padding: 5px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.card:hover a{
+    opacity: 1;
+    transform: translate(0);
+    transition: 0.75s;
+}
+@media(max-width:1000px){
+    
+    .item{
+        gap: 20px;
+        align-items: end;
+    }
+    .card{
+        width: 200px;
+    }
+    .card .card-img img{
+        width: 180px;
+    }
+}
+@media(max-width:900px){
+    .item{
+        margin-left: 80px;
+        gap: 20px;
+        align-items: end;
+    }
+    .card{
+        width: 180px;
+    }
+    .card .card-img img{
+        width: 160px;
+    }
+}
+@media(max-width:780px){
+    .item{
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-left: 90px;
+        align-items: flex-end;
+    }
+    .card{
+        width: 180px;
+    }
+    .card .card-img img{
+        width: 160px;
+    }
+}
+@media(max-width:620px){
+    #shop{
+        margin: 5px;
+        padding: 0;
+    }
+    .item{
+        margin-left: 0px;
+        flex-wrap: nowrap;
+    }
+    .card{
+        height: 110px;
+        width: 100px;
+    }
+    .card .card-img img{
+        width: 90px;
+        height: 100px;
+    }
+    .card:hover{
+        height: 170px;
+    }
+}
+@media(max-width:470px){
+    .item{
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-right: 30px;
+        
+    }
+    .card{
+        height: 110px;
+        width: 100px;
+    }
+    .card .card-img img{
+        width: 90px;
+        height: 100px;
+    }
+    .card:hover{
+        height: 170px;
+    }
+}
